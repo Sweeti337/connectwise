@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+/*      let obj1 = new Object();
+        let obj2 = {};
+        let obj3 = Object.create(null);
+
+        console.log(typeof obj1);
+        console.log(typeof obj2);
+        console.log(typeof obj3); */
+
+        let person = Object.create(null);
+            Object.defineProperty(person, "title", {
+                value : "Bruce",
+                writable : true,
+                enumerable : true,
+                configurable : true
+            });
+            
+            console.log(person.title);// Bruce;
+            person.title = "Joker";
+            console.log(person.title);// Joker;
+            
+            for(let prop in person){
+                console.log(prop, person[prop])
+            };
+            console.log(person);
+
+            Object.defineProperty(person, "titleAccess", {
+                get :function(){ return this.title },
+                set: function(ntitle){
+                    this.title = ntitle;
+                }
+            } );
+            console.log( person.titleAccess );
+            person.titleAccess = "Batman";
+            console.log( person.titleAccess );
+
+           /*  Object.defineProperty(person, "title", {
+                value : "Bruce",
+                writable : false,
+                enumerable : false,
+                configurable : false
+            });
+            console.log("person +++++++++++++++++++++ ");
+            for(let prop in person){
+                console.log(prop, person[prop])
+            };
+            console.log(person); */
+            </script>
+</head>
+<body>
+    
+</body>
+</html>

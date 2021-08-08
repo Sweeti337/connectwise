@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function Hero(rtitle, rfname, rlname){
+            // private property
+            var mission = "secret mission";
+            // public property
+            this.title = rtitle;
+            this.fname = rfname;
+            this.lname = rlname;
+           /*  this.fullname = function(){
+                return this.fname+" "+this.lname;
+            } */
+        };
+        Hero.prototype.fullname = function(){
+            return this.fname+" "+this.lname;
+        }
+
+        var hero = new Hero("Ironman", "Tony", "Stark");
+        var hero1 = new Hero("Batman", "Bruce", "Wayne");
+
+        console.log(hero.title);// Ironman
+        console.log(hero.mission);// error
+        console.log(hero.fullname());
+        console.log(hero1.fullname());
+        console.log( hero.fullname === hero1.fullname );
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

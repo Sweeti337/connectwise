@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let promise = new Promise(function(resolve,reject){
+            setTimeout(function(){
+                if(false){
+                    resolve("Resolve : Success message")
+                }else{
+                    reject("Reject : Error message")
+                }
+            },4000)
+        });
+
+        promise
+        .then(
+        function(res){ 
+            console.log("First Success Function", res ) ;
+            return res.toUpperCase();
+        },
+        function(err){
+            console.log("Error : ", err);
+            return err.toUpperCase();
+        })
+        .then(function(res){ 
+            console.log("Second Success Function", res ) 
+        }, function(err2){
+            console.log("Second Error : ", err2);
+        })
+        
+    /* .catch(function(err){
+            console.log("Error : ", err);
+            return err.toUpperCase();
+        })
+        .catch(function(err2){
+            console.log("Second Error : ", err2);
+        }); */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

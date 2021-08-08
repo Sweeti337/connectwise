@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         var hero = {
+            title : "Ironman",
+            power : 7,
+            city : "New York"
+        };
+        /*      
+        var tempHero = hero;
+        console.log("Line 15 ",tempHero.title, hero.title);
+        tempHero.title = "Joker";
+        console.log("Line 17 ",tempHero.title, hero.title); 
+        */
+
+        /* 
+        let herotitle = hero.title;
+        let heropower = hero.power;
+        let herocity = hero.city;
+
+        console.log("Line 25 ",herotitle, hero.title);
+        herotitle = "Joker";
+        console.log("Line 27 ",herotitle, hero.title); 
+        */
+
+      /*   
+        let { 
+            title : herotitle, 
+            power : heropower, 
+            city : herocity } = hero;
+        console.log("Line 35 ",herotitle, hero.title);
+        herotitle = "Joker";
+        console.log("Line 37 ",herotitle, hero.title);  */
+
+        // let {  title : title, power : power, city : city } = hero;
+        let {  title, power, city } = hero;
+        console.log("Line 44 ",title, hero.title);
+        title = "Joker";
+        console.log("Line 46 ",title, hero.title);
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
