@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        import {Hero} from './classes/hero.js';
+
+        var hero = new Hero("Ironman", "Tony", "Stark", "New York");
+        var hero1 = new Hero("Batman", "Bruce", "Wayne", "Gotham");
+        console.log(hero.fullname === hero1.fullname);// true
+        console.log(hero._mission);
+        console.log(hero.mission);
+        hero.mission = "Save the world";
+        console.log(hero.mission);
+        console.log(hero.city);
+        console.log(hero1.city);
+        console.log(Hero.sayVersion());
+        // console.log(hero.sayVersion());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
